@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <meta name="description" content="summary of index.html" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <style>
+      /* css sytanx 
+          <selector> {
+            <css-property> : <css-value>;
+            <css-property> : <css-value>;
+          }
+  
+          selector 
+            - tag
+            - id
+            - class
+            - combination of selector
+              - descentend selector
+              - and selector
+
+      */
+
+      h1 {
+        text-align: center;
+      }
+      .text-red {
+        color: red;
+      }
+      .underline {
+        text-decoration: underline;
+      }
+
+      p {
+        text-align: justify;
+      }
+
+      img {
+        height: 200px;
+      }
+
+      /* a{
+        text-decoration: none;
+      } */
+
+      span {
+        color: red;
+      }
+
+      /* combiniation of selector */
+      /* descendent selector */
+      footer li {
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <!-- donot use absolute for internal files: works in your system, but wont in others -->
+        <!-- <a href="D:\Desktop\falgun\contact.html">contact</a> -->
+        <a
+          id="active-link"
+          class=""
+          href="#"
+          style="color: black; text-decoration: underline"
+          >home</a
+        >
+        <a class="nav-link" href="./contact.html">contact</a>
+        <a class="nav-link" href="./courses/mern.html">mern</a>
+        <a class="nav-link" href="./courses/upcomming/machineLearning.html"
+          >machine learning</a
+        >
+      </nav>
+    </header>
+
+    <main>
+      <h1 class="text-red underline">Home page</h1>
+
+      <p>one</p>
+      <p>two</p>
+
+      <span>one</span>
+      <span>two</span>
+      <span>three</span>
+
+      <p>
+        uu Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+        porro optio vel necessitatibus facere fugit minima veniam error uu
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur porro
+        optio vel necessitatibus facere fugit minima veniam error uu Lorem,
+        ipsum dolor sit amet consectetur adipisicing elit. Pariatur porro optio
+        vel necessitatibus facere fugit minima veniam error uu Lorem, ipsum
+        dolor sit amet consectetur adipisicing elit. Pariatur porro optio vel
+        necessitatibus facere fugit minima veniam error consectetur ipsum libero
+        omnis molestiae repellat, aut velit, beatae eum mollitia at?
+      </p>
+      <p>
+        uu Lorem, ipsum <span class="underline"> title: </span>
+        <span>mern</span> dolor sit amet consectetur adipisicing elit. Pariatur
+        porro optio vel necessitatibus facere fugit minima veniam error
+        consectetur ipsum libero omnis molestiae repellat, aut velit, beatae eum
+        mollitia at?
+      </p>
+
+      <ul>
+        <li>mongodb</li>
+        <li>express</li>
+        <li>react</li>
+        <li>node</li>
+      </ul>
+
+      <h2>Paths</h2>
+      <ul>
+        <li>absolute path eg: D:\Desktop\falgun\contact.html</li>
+        <li class="underline text-red">ralative path</li>
+      </ul>
+
+      <h2>css types</h2>
+      <ul>
+        <li>inline</li>
+        <li>internal</li>
+        <li>exteranl</li>
+      </ul>
+
+      <h2>element types</h2>
+      <ul>
+        <li>inline eg: span, a</li>
+        <li>block eg: li, h1, p,</li>
+        <li>inline-block eg: img</li>
+      </ul>
+
+      <a href="https://www.coursera.org/articles/mern-stack" target="_blank">
+        <img
+          src="https://www.boardinfinity.com/blog/content/images/2023/01/Mern.png"
+          alt="mern logo"
+        />
+        <!-- height="200" -->
+      </a>
+
+      <img src="./glasses.jpg" alt="glasses" />
+
+      <!-- <img src="https://www.google.com/invalidUrl" alt="google logo" /> -->
+    </main>
+
+    <footer>
+      <ul>
+        <li>
+          <a href="https://www.facebook.com/" target="_blank"> facebook </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/" target="_blank"> youtube </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/" target="_blank"> instagram </a>
+        </li>
+      </ul>
+    </footer>
+    <!-- <script >
+      alert("js connected");
+    </script> -->
+    <script defer src="./js/index.js"></script>
+  </body>
+</html>

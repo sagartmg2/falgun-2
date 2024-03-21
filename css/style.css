@@ -1,0 +1,34 @@
+/* external css */
+/* selector
+        - tag
+         - id
+         - class
+*/
+
+/* a {
+    color: inherit;
+    text-transform: capitalize;
+    text-decoration: none;
+} */
+
+/* .nav-link {
+  color: inherit;
+  text-transform: capitalize;
+  text-decoration: none;
+} */
+
+header a {
+  color: inherit;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.active-link {
+  font-size: 18px;
+  font-weight: bold;
+  color: red !important;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+/* specificity socre  tag < class < id < inline-css < !important */
