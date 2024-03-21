@@ -3,4 +3,6 @@ tags / element
 
 attribute
     - something that describes our html tags
-    - each html tag/elements has its own arritubes
+    - each html tag/elements has its own arritubes   
+
+    wrong code.
