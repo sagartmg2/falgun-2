@@ -18,13 +18,18 @@ every day
 
 1. > git status (optional)
 2. add 
-       >  git add . 
-       > git add 
+       >  git add .  // all at once
+       > git add <filePath> // one at a time
 3. > git commit -m "message"
 4. > git push
+
 
 
 research on 
     git fork (optinal)
     git branches
     git pull request
+
+
+clone
+pull
