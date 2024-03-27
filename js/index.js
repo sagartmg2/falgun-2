@@ -1,140 +1,138 @@
-/* array,object */
-/* functions
-        - reusable.
+/* array,objects */
+/* functions */
+/* 
+    console.log(`${2} * 2 = ${2 * 2}`)
+    console.log(`${3} * 2 = ${3 * 2}`)
+    console.log(`${4} * 2 = ${4 * 2}`)
  */
 
-/* comments
-    ctrl + /
-    alt + shift + a    
+function double(input) {
+    let output = input * 2
+    // console.log(`${input} * 2 = ${output}`)
+    return output
+}
+
+let doubleValue = double(4)
+console.log({ doubleValue })
+
+console.log(double(100))
+console.log(double(111))
+
+/* to check data types */
+let type = typeof 12
+console.log(type)
+console.log(typeof true)
+
+let user1 = {
+    firstName: "ram",
+    middleName: "bdr",
+    lastName: "sharma",
+}
+let user2 = {
+    firstName: "hari",
+    middleName: "bdr",
+    lastName: "sharma",
+}
+
+function getFullName(userObj) {
+    return `${userObj.firstName} ${userObj.middleName} ${userObj.lastName} `
+}
+
+console.log(getFullName(user1))
+console.log(getFullName(user2))
+
+/* arrow function */
+const makeFullName = (userObj) => {
+    return `${userObj.firstName} ${userObj.middleName} ${userObj.lastName} `
+}
+
+console.log(makeFullName(user1))
+console.log(makeFullName(user2))
+
+const triple = (input) => {
+    return input * 3
+}
+
+const quadraple = (input) => input * 4
+
+const sum = (firstInput, secondInput) => {
+    return firstInput + secondInput
+}
+
+const diff = (firstInput, secondInput) => firstInput - secondInput
+
+console.log(triple(111))
+console.log(quadraple(111))
+
+let users = ["ram", "hari", "shyam", "sita"]
+console.log(users[0])
+console.log(users[1])
+console.log(users[2])
+console.log(users[3])
+
+/* conditional statements */
+/* if else 
+
+    syntax
+        if( <condition> ){
+            // for truthy condition 
+        }else{
+           //  for false condition
+        }
 
 */
 
-/**
- * function which print dobule of input
- * @param {number} input
- */
-function double(input) {
-    console.log(`${input} * 2 = ${input * 2}`)
+let willRain = true
+let hasProbability = false
+
+if (willRain) {
+    console.log("take umbrealla")
+} else {
+    if (hasProbability) {
+        console.log("you may need it. ")
+    } else {
+        console.log("no need")
+    }
 }
 
-double(100)
-double(200)
-double(400)
+
+if (willRain) {
+    console.log("take umbrealla")
+} else if (hasProbability) {
+    console.log("you may need it. ")
+} else {
+    console.log("no need")
+}
 
 
-let colors = [
-    {
-        name:"red",
-        hexValue:"#FFEE00",
-    }
-]
 
 
-let todos = [
+let topics = [
     {
         title: "html",
-        status: "pending",
+        status: true,
     },
     {
         title: "css",
-        status: "complted",
+        status: true,
     },
     {
         title: "react",
-        status: "pending",
-    },
-    {
-        title: "express",
-        status: "pending",
+        status: false,
     },
 ]
 
 /* 
-    console.log(`${todos[0].title} is ${todos[0].status}`)
-    console.log(`${todos[1].title} is ${todos[1].status}`)
-    console.log(`${todos[2].title} is ${todos[2].status}`)
-    console.log(`${todos[3].title} is ${todos[3].status}`)
- */
-
-function printStatus(index) {
-    console.log(`${todos[index].title} is ${todos[index].status}`)
-}
-
-printStatus(0)
-printStatus(1)
-printStatus(2)
-printStatus(3)
-
-function printTodoInfo(todo) {
-    console.log(`${todo.title} is ${todo.status}`)
-}
-
-printTodoInfo(todos[0])
-printTodoInfo({ name: "css", status: "complted" })
-printTodoInfo(todos[2])
-printTodoInfo(todos[3])
-
-function greet(name) {
-    console.log(`hello ${name}`)
-}
-
-greet("ram")
-greet("sita")
-greet("hari")
-
-/* sum(100,200) */
-console.log("ram", "sita", "hari")
-
-function activate() {
-    console.log("acivate")
-}
-
-let user = {
-    name: "ram",
-    login: function login() {
-        console.log("logged in ")
-    },
-    logout: function () {
-        console.log("logged out ")
-    },
-    "activate": activate,
-}
-
-console.log(user.name)
-user.login()
-user.logout()
-user.signOut  = user.logout
-user.signOut()
-user.activate()
+    html is complted
+    css is complted
+    react is pending 
+*/
 
 /* 
-    let console = {
-        log: function(){
-            
-        }
-    }
- */
+    operators
+*/
 
-
-    /* 
-        research
-        - arrow function
-        - return
-
-        loop
-            - for loop
-        
-            
-        array functions
-        .forEach
-        .map
-        .filter
-
-    */
-
-
-function sum(inpu1,inpu2){
-
-}
-
-const calculateSum = (inpu1,inpu2) =>{  }
+/* reserach */
+/* object destrcturing */
+/* block scope */
+/* ternary operator */
