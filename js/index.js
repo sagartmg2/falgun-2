@@ -1,111 +1,25 @@
-/* array,objects */
-/* functions */
-/* 
-    console.log(`${2} * 2 = ${2 * 2}`)
-    console.log(`${3} * 2 = ${3 * 2}`)
-    console.log(`${4} * 2 = ${4 * 2}`)
- */
-
-function double(input) {
-    let output = input * 2
-    // console.log(`${input} * 2 = ${output}`)
-    return output
-}
-
-let doubleValue = double(4)
-console.log({ doubleValue })
-
-console.log(double(100))
-console.log(double(111))
-
-/* to check data types */
-let type = typeof 12
-console.log(type)
-console.log(typeof true)
-
-let user1 = {
-    firstName: "ram",
-    middleName: "bdr",
-    lastName: "sharma",
-}
-let user2 = {
-    firstName: "hari",
-    middleName: "bdr",
-    lastName: "sharma",
-}
-
-function getFullName(userObj) {
-    return `${userObj.firstName} ${userObj.middleName} ${userObj.lastName} `
-}
-
-console.log(getFullName(user1))
-console.log(getFullName(user2))
-
+/* function */
 /* arrow function */
-const makeFullName = (userObj) => {
-    return `${userObj.firstName} ${userObj.middleName} ${userObj.lastName} `
+/* return in  function */
+/* if else */
+
+// const login = () => {
+//     console.log(this);
+//     console.log("logged in")
+// }
+
+function login() {
+    // console.log(this);
+    console.log(this.name, "logged in")
 }
 
-console.log(makeFullName(user1))
-console.log(makeFullName(user2))
+let users = [
+    { name: "ram", login: login },
+    { name: "hari", login: login },
+]
 
-const triple = (input) => {
-    return input * 3
-}
-
-const quadraple = (input) => input * 4
-
-const sum = (firstInput, secondInput) => {
-    return firstInput + secondInput
-}
-
-const diff = (firstInput, secondInput) => firstInput - secondInput
-
-console.log(triple(111))
-console.log(quadraple(111))
-
-let users = ["ram", "hari", "shyam", "sita"]
-console.log(users[0])
-console.log(users[1])
-console.log(users[2])
-console.log(users[3])
-
-/* conditional statements */
-/* if else 
-
-    syntax
-        if( <condition> ){
-            // for truthy condition 
-        }else{
-           //  for false condition
-        }
-
-*/
-
-let willRain = true
-let hasProbability = false
-
-if (willRain) {
-    console.log("take umbrealla")
-} else {
-    if (hasProbability) {
-        console.log("you may need it. ")
-    } else {
-        console.log("no need")
-    }
-}
-
-
-if (willRain) {
-    console.log("take umbrealla")
-} else if (hasProbability) {
-    console.log("you may need it. ")
-} else {
-    console.log("no need")
-}
-
-
-
+users[0].login()
+users[1].login()
 
 let topics = [
     {
@@ -122,17 +36,123 @@ let topics = [
     },
 ]
 
+/* falsy values */
+let ourCondition = false
+ourCondition = 0
+ourCondition = ""
+ourCondition = null
+ourCondition = undefined
+ourCondition = NaN
+
 /* 
-    html is complted
-    css is complted
-    react is pending 
+    except these above 6, all are considered positive value in javascript
+    ourCondition = []
+    ourCondition = {}
+*/
+
+if (ourCondition) {
+    console.log("+ve value")
+} else {
+    console.log("neagative value")
+}
+
+/* falsy values in javascript
+     - false
+     - 0
+
 */
 
 /* 
-    operators
+    if (topics[0].status) {
+        console.log(`${topics[0].title} is completed`)
+    } else {
+        console.log(`${topics[0].title} is pending`)
+    }
+
+    if (topics[2].status) {
+        console.log(`${topics[2].title} is completed`)
+    } else {
+        console.log(`${topics[2].title} is pending`)
+    }
+ */
+
+const checkStatus = (topic) => {
+    /* object destructuring */
+    let { status, title } = topic
+
+    // if (topic.status) {
+    //     console.log(`${topic.title} is completed`)
+    // } else {
+    //     console.log(`${topic.title} is pending`)
+    // }
+
+    if (status) {
+        console.log(`${title} is completed`)
+    } else {
+        console.log(`${title} is pending`)
+    }
+}
+
+checkStatus({
+    title: "html",
+    status: true,
+})
+checkStatus(topics[0])
+checkStatus(topics[1])
+checkStatus(topics[2])
+
+/* 
+        html is complted
+        css is complted
+        react is pending 
+    */
+
+/* 
+    research optional
+    - global execution context
+    - call stack
+    - hoisting
+
+    
+    // required
+    - falsy values in js
+ */
+
+/* global scope */
+let brand = "apple"
+
+console.log(double(2))
+function double(input) {
+    let result = input * 2
+    return result
+}
+
+const triple = (input) => {
+    let result = input * 3
+    return result
+}
+console.log(triple(111))
+
+if (true) {
+    let data = "api data"
+    console.log({ data })
+}
+
+if (true) {
+    const data = "api data 2"
+    console.log({ data })
+}
+
+if (true) {
+    /* this data variable is a block scope varirable   */
+    const data = "api data 3"
+}
+
+/* we cannot access block scope varialbe outside the scope */
+console.log({ data })
+
+/* operators
+    logical operators
+     
 */
 
-/* reserach */
-/* object destrcturing */
-/* block scope */
-/* ternary operator */
