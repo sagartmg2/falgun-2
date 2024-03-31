@@ -1,127 +1,76 @@
-/*
-    function 
-    arrow function
-    return in function 
-    if else 
-        nested  if else. 
-    scope
-    object destructuring
- */
+/* logical operatrs
+     - AND  &&
+     - OR   ||  any one of the condition can be true
+     - NOT  ! 
+     */
 
-/* 
-operators
-    arthematic 
-        + -
-        * - multiply
-        / - division
-        % - modolus // gives remainder
-
-        
-    post increment 
-        it updates the value, but we cannot  access the updated value immedeately
-    pre increment 
-        it updates the value, but we can also access the updated value immedeately
-
-    assignment 
-        = 
-
-    comparision 
-         < 
-         >
-         <=
-         >=
-         ==  // equality operator
-         ===   // strict equality operator
-
-    
-    logical operators
-        AND   &&
-        OR   ||
-        NOT   !
-
-*/
-
-console.log(10 / 3)
-console.log(10 % 2)
-
-let count = 100
-// count = 101
-// count = count  + 1
-// count += 1
-// count++
-// ++count
-
-// console.log(count++,count);
-
-const double = (input) => {
-    return input * 2
-}
-
-// let output = double(count++)
-let output = double(++count)
-console.log({ output })
-console.log({ count })
-
-console.log(100 < 100) // false
-console.log(100 <= 100) // true
-console.log(100 == 100) // true
-console.log("ram" == "Ram")
-console.log("ram" == "ram ")
-console.log("1" == 1) // typecast : data type conversion
-
-console.log("hello" + "world");
-console.log("1" + 1); // numberical 1 is converted to string
-console.log("1" + "1");  // 11
-console.log("1" - 1);  // - is only i numerical operators // "1" is converted to number
-console.log("one" - 1); // NaN
-
-
-console.log("1" === 1) // false // no typecast // check for data types too. 
-
-
-
-
-/* reserach
-    ternary operators
-    reference data types 
-        - object 
-        - arry 
-*/
-
-// console.log([] == []) // false
-// console.log({} == {}) // false
-
-
-let product = {
-    price:"100.50",
-    vat: 15
-}
-
-// let totalPrice = product.price + product.vat
-// let totalPrice = parseFloat(product.price) + product.vat
-// console.log(totalPrice);
-
-
+let name = "ram"
 
 let student = {
-    name:"Ram",
-    paid:false,
-    hasScholoarship:false,
-    hasMetAttendance:true
+    name: "Ram",
+    paid: false,
+    hasScholoarship: true,
+    hasMetAttendance: false,
 }
 
-if(student.paid){
-    console.log("he can  give exam");
-}else {
-    if(student.hasScholoarship){
-        console.log("he can  give exam");
-    }else{
-        console.log("he can not  give exam");
-    }
+/* object destructuring */
+let { paid, hasScholoarship, hasMetAttendance } = student
+
+/* 
+    if (paid) {
+        console.log("can give")
+    } else if (hasScholoarship) {
+        console.log("can give")
+    } else {
+        console.log("cant give.")
+    } 
+*/
+
+/* in react ternary operator: must have. */
+console.log(`ram can / cant give exam`)
+console.log(`ram ${paid ? "can" : "cant"} give exam`)
+console.log(`ram ${paid || hasScholoarship ? "can" : "cant"} give exam`)
+console.log(
+    `ram ${
+        (paid || hasScholoarship) && hasMetAttendance ? "can" : "cant"
+    } give exam`
+)
+
+//  wrong // use if-else
+// (paid || hasScholoarship) ? console.log("can give") : console.log("cnat give");
+
+/* 
+
+if (hasMetAttendance && paid || hasScholoarship) {
+    // if (false && false || true  ) {  
+    // if (false || true  ) { // AND get higher priority
+    console.log("can give")
+} else {
+    console.log("cant give.")
 }
 
 
+ */
 
-/* ram cant give exam   // if none of the condition is true   */
-/* ram can give exam    // if any one of the condition is true  */
+if (hasMetAttendance && (paid || hasScholoarship)) {
+    // if (hasMetAttendance && (false || true) ) {
+    console.log("can give")
+} else {
+    console.log("cant give.")
+}
 
+// ternary operator ?
+
+console.log("ram" || "hari") // ram
+console.log("" || "hari") // hari
+
+let products = [
+    {
+        name: "watch",
+        image: null,
+    },
+    {
+        name: "mobile",
+        image: "https://image.com",
+    },
+]
