@@ -1,76 +1,32 @@
-/* logical operatrs
-     - AND  &&
-     - OR   ||  any one of the condition can be true
-     - NOT  ! 
-     */
-
-let name = "ram"
-
-let student = {
-    name: "Ram",
-    paid: false,
-    hasScholoarship: true,
-    hasMetAttendance: false,
-}
-
-/* object destructuring */
-let { paid, hasScholoarship, hasMetAttendance } = student
-
-/* 
-    if (paid) {
-        console.log("can give")
-    } else if (hasScholoarship) {
-        console.log("can give")
-    } else {
-        console.log("cant give.")
-    } 
-*/
-
-/* in react ternary operator: must have. */
-console.log(`ram can / cant give exam`)
-console.log(`ram ${paid ? "can" : "cant"} give exam`)
-console.log(`ram ${paid || hasScholoarship ? "can" : "cant"} give exam`)
-console.log(
-    `ram ${
-        (paid || hasScholoarship) && hasMetAttendance ? "can" : "cant"
-    } give exam`
-)
-
-//  wrong // use if-else
-// (paid || hasScholoarship) ? console.log("can give") : console.log("cnat give");
-
-/* 
-
-if (hasMetAttendance && paid || hasScholoarship) {
-    // if (false && false || true  ) {  
-    // if (false || true  ) { // AND get higher priority
-    console.log("can give")
-} else {
-    console.log("cant give.")
-}
-
-
- */
-
-if (hasMetAttendance && (paid || hasScholoarship)) {
-    // if (hasMetAttendance && (false || true) ) {
-    console.log("can give")
-} else {
-    console.log("cant give.")
-}
-
-// ternary operator ?
-
-console.log("ram" || "hari") // ram
-console.log("" || "hari") // hari
-
-let products = [
+let dbUsers = [
     {
-        name: "watch",
-        image: null,
+        name: "ram",
+        email: "r@r.com",
+        username: "ram",
+        password: "12345678",
     },
     {
-        name: "mobile",
-        image: "https://image.com",
+        name: "shyam",
+        email: "shyam@shyam.com",
+        username: "shyam",
+        password: "password",
+    },
+    {
+        name: "hari",
+        email: "hari@hari.com",
+        username: "hari",
+        password: "password",
     },
 ]
+
+function login(inputEmail, inputPassword) {
+    /* code here.  */
+}
+
+// login("hari@hari.com", "password") // login successfull
+// login("r@r.com", "12345678") // login successfull
+// login("r@r.com", "123456") // invalid credentials
+// login("alex@gmailcom.com", "123456") // invalid credentials
+login("shyam", "password") // login successfulll
+login("shyam@shyam.com", "password") // login successfulll
+login("shyam123", "password") // invalid createdinals. 
