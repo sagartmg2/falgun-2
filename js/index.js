@@ -1,99 +1,126 @@
-let dbUsers = [
-    {
-        name: "ram",
-        email: "r@r.com",
-        username: "ram",
-        password: "12345678",
-    },
-    {
-        name: "shyam",
-        email: "shyam@shyam.com",
-        username: "shyam",
-        password: "password",
-    },
-    {
-        name: "hari",
-        email: "hari@hari.com",
-        username: "hari",
-        password: "password",
-    },
-]
+/* arrow  functions */
+/* array realted functions
+     push
+     pop
+     unshift
+     shift
+     splice
 
-const login = (input, inputPassword) => {
-    for (let index = 0; index < 3; index++) {
-        let selectedUser = dbUsers[index]
-        let { email, password, username } = selectedUser
-        if ((email == input || username == input) && password === inputPassword) {
-            console.log("login success")
-            return
-        }
-    }
-    console.log("invalid...")
+
+     doesnot change original array.
+     slice
+     array.forEach
+     array.filter
+     array.map
+
+*/
+
+let numbers = [4, 5, 3, 2]
+numbers[4] = 1 //  [4, 5, 3, 2,1]
+numbers.push(0)
+console.log(numbers)
+numbers.pop()
+console.log(numbers)
+
+let brands = ["apple", "lg", "sony", "panasonic"]
+brands.splice(1, 2) // ["apple", "panasonic"]
+brands.splice(1, 0, "samsung")
+
+console.log(brands)
+
+let colors = ["Red", "green", "orange", "black"]
+let newColors = colors.slice(1, 4)
+console.log({ colors })
+console.log({ newColors })
+
+/* callback function
+        - 
+*/
+
+const showPopup = () => {
+    console.log("show popup")
 }
 
-// login("hari@hari.com", "passwordddd")
-login("hari", "password")
+setTimeout(showPopup, 2000)
+setTimeout(() => {
+    console.log("show another popup")
+}, 3000)
 
-function findMultiplication(input) {
-    let { number, startFrom, endAt } = input
-    //TODO:code here
-    /* loop here.  */
-    for (startFrom; startFrom <= endAt; startFrom++) {
-        let result = number * startFrom
-        console.log(` ${number} x ${startFrom} = ${result}`)
-    }
-}
-
-// findMultiplication(5,5,10)
-findMultiplication({
-    number: 5,
-    startFrom: 5,
-    endAt: 10,
-})
-
-// findMultiplication({
-//     number: 10,
-//     startFrom: 5,
-//     endAt: 10,
-// })
+let names = ["ram", "abc", "xyz", "ijk"]
 
 /* 
-     5 x 5 = 25 
-     5 x 6 = 30 
-     5 x 7 = 35 
-     5 x 8 = 40 
-     5 x 9 = 45 
-     5 x 10 = 50 
-*/
-
-
-/* asynchronous 
-        - donot block other following codes
-        - runs in background
-*/
-
-setTimeout(showPopup, 0)
-
-
-
-/* waiting  for api data  */
-for (let index = 0; index < 10000; index++) {
-    console.log(index)
+for (let index = 0; index < names.length; index++) {
+    const element = names[index]
+    console.log(element)
 }
+ */
+
+names.forEach((element, index) => {
+    console.log("index -", index, element)
+})
+
+let todos = [
+    {
+        title: "html",
+        status: true,
+    },
+    {
+        title: "css",
+        status: true,
+    },
+    {
+        title: "react",
+        status: false,
+    },
+    {
+        title: "express",
+        status: false,
+    },
+]
+let completedTodos  = []
+
+completedTodos.push({
+    title: "html",
+    status: true,
+})
+
+console.log({completedTodos});
 
 
-/* callback functions
-        - function passed as an arguement to another function
-*/
 
-function showPopup() {
-    console.log("popup showd")
-}
+/* 
+todos.forEach((element) =>{
+    let {title,status}  = element
+    if(status){
+        console.log(`${title} is compoleted`);
+    }else{
+        console.log(`${title} is pending`);
+    }
+}) */
+
+todos.forEach((element) => {
+    let { title, status } = element
+    console.log(`${title} is ${status ? "complted" : "pendng"}`)
+})
 
 
-console.log("show webpage content")
+
+const nepaliNames = ["Aarav", "Aarya", "Aasha", "Anisha"]
+const fakeUsers = []
 
 
-/* research
-    callstack.
+/* 
+
+TODO: 
+    From the above array create an new array of users with email and password 
+
+
+    OUTPUT should be like following
+    [
+        { name: 'Aarav', email: 'aarav@gmail.com', password: 'aarav0' },
+        { name: 'Aarya', email: 'aarya@gmail.com', password: 'aarya1' },
+        { name: 'Aasha', email: 'aasha@gmail.com', password: 'aasha2' },
+        { name: 'Anisha', email: 'anisha@gmail.com', password: 'anisha3' },
+    ] 
+
 */
