@@ -98,6 +98,7 @@ todos.forEach((element) =>{
     }
 }) */
 
+
 todos.forEach((element) => {
     let { title, status } = element
     console.log(`${title} is ${status ? "complted" : "pendng"}`)
